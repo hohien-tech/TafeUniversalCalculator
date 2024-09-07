@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="Calculator.CurrencyCoversion"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+		<StackPanel Orientation="Vertical" Spacing="30" Margin="30">
+		<TextBlock Text="Currency Conversion Calculator" HorizontalAlignment="Center" FontSize="48" Margin="20" FontWeight="Bold"/>
+			<StackPanel Orientation="Horizontal" Spacing="20" HorizontalAlignment="Center">
+				<StackPanel>
+			<TextBlock Text="Amount" FontSize="36"/>
+			<TextBox x:Name="amountTextBox" Width="300" FontSize="16"/>
+		</StackPanel>
+		<StackPanel>
+			<TextBlock Text="From" FontSize="36"/>
+			
+					<ComboBox x:Name="fromComboBox" Width="300" FontSize="16">
+						<x:String>Euro</x:String>
+						<x:String>USD - US Dollar</x:String>
+						<x:String>British Pound</x:String>
+						<x:String>Indian Rupee</x:String>
+					</ComboBox>
+				</StackPanel>
+		<StackPanel>
+			<TextBlock Text="To" FontSize="36"/>
+					<ComboBox x:Name="toComboBox" Width="300" FontSize="16">
+						<x:String>Euro</x:String>
+						<x:String>USD - US Dollar</x:String>
+						<x:String>British Pound</x:String>
+						<x:String>Indian Rupee</x:String>
+					</ComboBox>
+
+				</StackPanel>
+			</StackPanel>
+			<StackPanel>
+				<TextBlock x:Name="from1TextBlock" FontSize="14"/>
+				<TextBlock x:Name="to1TextBlock" FontSize="22" FontWeight="Bold" Height="29"/>
+			</StackPanel>
+			<TextBlock x:Name="from2TextBlock" FontSize="14" />
+			<TextBlock x:Name="to2TextBlock" FontSize="14"/>
+			<Button x:Name="currencyConvertButton" Content="Currency conversion" HorizontalAlignment="Center" FontSize="26" Click="currencyConvertButton_Click"/>
+			<Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Center" FontSize="26" Click="exitButton_Click"/>
+		</StackPanel>
+	</Grid>
+</Page>

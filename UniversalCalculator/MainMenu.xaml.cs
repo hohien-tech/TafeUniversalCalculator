@@ -27,24 +27,26 @@ namespace Calculator
 			this.InitializeComponent();
 		}
 
-		private void mathsCalButton_Click(object sender, RoutedEventArgs e)
-		{
-
-		}
+		
 
 		private void mortgageCalButton_Click(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void exitButton_Click(object sender, RoutedEventArgs e)
 		{
 			
 		}
 
+		private void exitButton_Click(object sender, RoutedEventArgs e)
+		{
+			Environment.Exit(0);
+		}
+
 		private void currencyConButton_Click(object sender, RoutedEventArgs e)
 		{
+			mainMenu.Content = new CurrencyCoversion();
+		}
 
+		private void mathsCalButton_Click(object sender, RoutedEventArgs e)
+		{
+			mainMenu.Content = new MainPage();
 		}
 	}
 }
